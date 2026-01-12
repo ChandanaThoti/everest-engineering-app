@@ -1,4 +1,4 @@
-import 'package:everest_engineering/login/widgets/welcome.dart';
+import 'package:everest_engineering/src/widgets/welcome.dart';
 import 'package:flutter/material.dart';
 
 void main() {
