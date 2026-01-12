@@ -2,7 +2,9 @@ import 'package:everest_engineering/src/widgets/welcome.dart';
 import 'package:flutter/material.dart';
 
 void main() {
+  // coverage:ignore-start
   runApp(const MyApp());
+  // coverage:ignore-end
 }
 
 class MyApp extends StatelessWidget {
