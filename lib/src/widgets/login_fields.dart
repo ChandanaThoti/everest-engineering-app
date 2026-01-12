@@ -14,12 +14,6 @@ class LoginFields extends StatelessWidget {
             labelText: "User Name",
             border: OutlineInputBorder(),
           ),
-          validator: (String? value) {
-            if (value != "") {
-              return "Please enter user name";
-            }
-            return null;
-          },
         ),
         TextFormField(
           decoration: InputDecoration(
