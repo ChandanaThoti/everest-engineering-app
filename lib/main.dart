@@ -1,4 +1,4 @@
-import 'package:everest_engineering/src/widgets/welcome.dart';
+import 'package:everest_engineering/widgets/welcome.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -31,7 +31,6 @@ class MyApp extends StatelessWidget {
           child: Center(
             child: Text(
               "Contact Us for support",
-
               style: TextStyle(fontSize: 20, color: Colors.white),
             ),
           ),
