@@ -1,6 +1,6 @@
 import 'package:everest_engineering/main.dart';
 import 'package:flutter/material.dart';
-import 'package:everest_engineering/src/widgets/login_form.dart';
+import 'package:everest_engineering/widgets/login_form.dart';
 
 class Welcome extends MyApp {
   const Welcome({super.key});
