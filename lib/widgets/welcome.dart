@@ -17,7 +17,7 @@ class Welcome extends MyApp {
             style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
           ),
           Text("SignIn to Continue", style: TextStyle(fontSize: 20)),
-          LoginForm(),
+          LoginState(),
         ],
       ),
     );
