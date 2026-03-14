@@ -17,8 +17,7 @@ class HomeScreen extends StatelessWidget {
         ),
         backgroundColor: const Color.fromARGB(255, 43, 42, 42),
       ),
-      body: Padding(
-        padding: EdgeInsets.all(30),
+      body: Center(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
           spacing: 20,
