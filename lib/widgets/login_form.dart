@@ -1,3 +1,4 @@
+import 'package:everest_engineering/widgets/home.dart';
 import 'package:flutter/material.dart';
 
 class LoginState extends StatefulWidget {
@@ -9,7 +10,7 @@ class LoginState extends StatefulWidget {
 class _LoginForm extends State<LoginState> {
   final TextEditingController _usernameController = TextEditingController();
   final TextEditingController _passwordController = TextEditingController();
-  void _login() {
+  void login() {
     String username = _usernameController.text;
     String password = _passwordController.text;
 
@@ -18,28 +19,19 @@ class _LoginForm extends State<LoginState> {
         context: context,
         builder: (context) => AlertDialog(
           title: const Text("Confirm to Login"),
-          content: const Text("Login Successful"),
+          content: Text("Login Successful $username"),
           actions: <Widget>[
-            TextButton(
-              onPressed: () {
-                Navigator.of(context).pop();
-              },
+            ElevatedButton(
               child: const Text("okay"),
-            ),
-          ],
-        ),
-      );
-    } else {
-      showDialog(
-        context: context,
-        builder: (context) => AlertDialog(
-          content: const Text("Please fill all the fields"),
-          actions: <Widget>[
-            TextButton(
               onPressed: () {
-                Navigator.of(context).pop();
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => Home(),
+                    settings: RouteSettings(arguments: username),
+                  ),
+                );
               },
-              child: const Text("okay"),
             ),
           ],
         ),
@@ -76,7 +68,7 @@ class _LoginForm extends State<LoginState> {
               ),
             ),
             ElevatedButton(
-              onPressed: () => _login(),
+              onPressed: () => login(),
               style: ButtonStyle(
                 backgroundColor: WidgetStateProperty.all<Color>(
                   const Color.fromARGB(255, 33, 32, 32),
