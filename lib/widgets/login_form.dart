@@ -1,4 +1,4 @@
-import 'package:everest_engineering/widgets/tab_navigation.dart';
+import 'package:everest_engineering/widgets/home.dart';
 import 'package:flutter/material.dart';
 
 class LoginState extends StatefulWidget {
@@ -17,13 +17,14 @@ class _LoginForm extends State<LoginState> {
     if (username != '' && password != '') {
       showDialog(
         context: context,
-        builder: (context) => AlertDialog(
+        builder: (BuildContext dialogueContext) => AlertDialog(
           title: const Text("Confirm to Login"),
           content: Text("Login Successful $username"),
           actions: <Widget>[
             ElevatedButton(
-              child: const Text("okay"),
+              child: const Text("Okay"),
               onPressed: () {
+                Navigator.pop(dialogueContext);
                 Navigator.push(
                   context,
                   MaterialPageRoute(
@@ -32,6 +33,13 @@ class _LoginForm extends State<LoginState> {
                   ),
                 );
               },
+            ),
+
+            ElevatedButton(
+              onPressed: () {
+                Navigator.pop(context);
+              },
+              child: Text("Cancel"),
             ),
           ],
         ),
