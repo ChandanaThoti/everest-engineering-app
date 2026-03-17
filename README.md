@@ -18,6 +18,8 @@ Everest Engineering app is a flutter application which has a welcome screen with
 ## Features
 
 - Login feature provides welcome screen with appBar, loginForm and footer.
+- Navigation feature ensure to navigate to home and provide home and profile tabs.
+- Network feature provides displaying and managing person data with get, put, post and delete http methods.
 
 ## Tech Stack
 
