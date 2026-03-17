@@ -1,3 +1,4 @@
+import 'package:everest_engineering/network/person_list.dart';
 import 'package:flutter/material.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -17,24 +18,7 @@ class HomeScreen extends StatelessWidget {
         ),
         backgroundColor: const Color.fromARGB(255, 43, 42, 42),
       ),
-      body: Center(
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.center,
-          spacing: 20,
-          children: [
-            Text(
-              "Welcome to Everest Engineering",
-              style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
-            ),
-            ElevatedButton(
-              onPressed: () {
-                Navigator.pop(context);
-              },
-              child: Text("Logout"),
-            ),
-          ],
-        ),
-      ),
+      body: Center(child: PersonList()),
     );
   }
 }
